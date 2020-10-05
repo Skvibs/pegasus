@@ -1,10 +1,15 @@
 
-
-
 <header class="header">
     <div class="wrapper">
         <div class="logo"><a href="/"><img src="images/dest/logo.png" alt=""></a></div>
         <div class="container">
+    
+            <div class='sandwich'>
+              <div class='sw-topper'></div>
+              <div class='sw-bottom'></div>
+              <div class='sw-footer'></div>
+            </div>
+
             <div class="menu-wrap">
                 <nav class="menu">
                     <li><a class="active" href="/" title="Home">Home</a></li>

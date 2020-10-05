@@ -38,6 +38,9 @@ $(document).ready(function () {
     }, 700);
 
 
+    $(".sandwich").click(function() {
+      $(".sandwich").toggleClass("active");
+    });
 
 
     $(".js-scroll-down").click(function () {

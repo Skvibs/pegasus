@@ -11,7 +11,7 @@
 
 <?php include('_header.php') ?>
 
-<section class="section first-screen--home">
+<!-- <section class="section first-screen--home">
     <div class="slider-home carousel1 owl-carousel ">
 
         <div class="slider-home_item" style="background-image: url('images/dest/picture-1.jpg')">
@@ -157,6 +157,6 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 <?php include('_footer.php') ?>

@@ -1,5 +1,5 @@
 
-<footer class="footer">
+<!-- <footer class="footer">
     <div class="container">
         <div class="footer_wrap">
             <a class="footer_logo" href="/">
@@ -30,7 +30,7 @@
             © Pegasosfinance. All rights reserved. 
         </div>
     </div>
-</footer>
+</footer> -->
 
 
 <!--<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>-->

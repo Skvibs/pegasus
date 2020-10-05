@@ -66,6 +66,61 @@ body
   align-items: center
   justify-content: space-between
   padding-top: 32px
+  position: relative
+
+.sandwich
+  width: 45px
+  height: 45px
+  position: absolute
+  top: 13px
+  right: 0
+  cursor: pointer
+  display: none
+  z-index: 20
+
+.sw-topper
+  position: relative
+  top: 0
+  width: 45px
+  height: 5px
+  background: #000
+  border: none
+  border-radius: 4px 4px 4px 4px
+  transition: transform 0.5s, top 0.2s
+
+.sw-bottom
+  position: relative
+  width: 45px
+  height: 5px
+  top: 10px
+  background: #000
+  border: none
+  border-radius: 4px 4px 4px 4px
+  transition: transform 0.5s, top 0.2s
+  transition-delay: 0.2s, 0s
+
+.sw-footer
+  position: relative
+  width: 45px
+  height: 5px
+  top: 20px
+  background: #000
+  border: none
+  border-radius: 4px 4px 4px 4px
+  transition: all 0.5s
+  transition-delay: 0.1s
+
+.sandwich.active
+  .sw-topper
+    top: 10px
+    transform: rotate(140deg)
+  .sw-bottom
+    top: 5px
+    transform: rotate(-140deg)
+  .sw-footer
+    opacity: 0
+    top: 0
+    transform: rotate(180deg)
 
 .menu
   list-style-type: none
