@@ -21,6 +21,13 @@
                     <a class="footer_menu-link" href="#" title="Kontakt">Kontakt</a>
                 </div>
             </div>
+            <div class="contacts_link">
+                <a class="contacts_link-phone" href="tel:+41447475153">+41 44 747 51 53</a>
+                <a class="contacts_link-email" href="mailto:support@pegasosfinance.ch">support@pegasosfinance.ch</a>
+            </div>
+        </div>
+        <div class="footer_copy">
+            © Pegasosfinance. All rights reserved. 
         </div>
     </div>
 </footer>

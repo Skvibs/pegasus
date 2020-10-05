@@ -492,9 +492,22 @@ body
 .footer
   background-color: #000
   color: #fff
+  padding-top: 57px
   &_wrap
     display: flex
     align-items: center
+    padding-bottom: 40px
+    border-bottom: 2px solid rgba(#fff, .5)
+    position: relative
+    &:after
+      content: ''
+      position: absolute
+      left: 0
+      bottom: -2px
+      width: 36px
+      height: 2px 
+      background-color: $gold
+
   &_logo
     display: inline-block
     max-width: 113px
@@ -532,7 +545,19 @@ body
 
     &-left
       margin-right: 90px
+  &_copy
+    font-size: 12px
+    line-height: 1.92
+    letter-spacing: normal
+    color: #ffffff
+    padding: 8px 0 18px
+  .contacts_link
+    margin: 0 auto
 
+.home-page
+  .footer
+    .contacts_link
+      display: none
 
 
 
