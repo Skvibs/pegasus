@@ -1,0 +1,36 @@
+
+@font-face {
+    font-family: Avenir-Black;
+    src: url(../fonts/Avenir-Black.woff2) format("woff2"), url(../fonts/Avenir-Black.woff) format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Avenir-Book;
+    src: url(../fonts/Avenir-Book.woff2) format("woff2"), url(../fonts/Avenir-Book.woff) format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Avenir-BookOblique;
+    src: url(../fonts/Avenir-BookOblique.woff2) format("woff2"), url(../fonts/Avenir-BookOblique.woff) format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Avenir-Heavy;
+    src: url(../fonts/Avenir-Heavy.woff2) format("woff2"), url(../fonts/Avenir-Heavy.woff) format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Avenir-Medium;
+    src: url(../fonts/Avenir-Medium.woff2) format("woff2"), url(../fonts/Avenir-Medium.woff) format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Avenir-Roman;
+    src: url(../fonts/Avenir-Roman.woff2) format("woff2"), url(../fonts/Avenir-Roman.woff) format("woff");
+    font-display: swap;
+}

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="12" viewBox="0 0 26 12">
+    <g fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g stroke="#000" stroke-width="2.16">
+            <g>
+                <g style="mix-blend-mode:multiply">
+                    <g>
+                        <g>
+                            <path d="M0 8.854h21.993M13.196 0l8.797 8.854" transform="translate(-1520 -1042) translate(0 120) translate(1522 924) rotate(180 11 5) matrix(1 0 0 -1 0 10)"/>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

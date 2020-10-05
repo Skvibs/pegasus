@@ -1,0 +1,549 @@
+@import "reset"
+
+@import "owl.carousel.min"
+@import "owl.theme.default.min"
+
+@import "fonts"
+
+
+
+$book: 'Avenir-Book', sans-serif
+$black: 'Avenir-Black', sans-serif
+$bookOblique: 'Avenir-BookOblique', sans-serif
+$heavy: 'Avenir-Heavy', sans-serif
+$medium: 'Avenir-Medium', sans-serif
+$roman: 'Avenir-Roman', sans-serif
+
+$gold: #a89662
+
+
+*::selection
+  background-color: #fffa00
+  color: #000
+*
+  box-sizing: border-box
+
+body
+  font-family: $book
+  counter-reset: num
+  min-width: 320px
+  font-weight: 400
+  background-color: #fff
+  color: #000
+  font-size: 16px
+
+.wrapper
+  max-width: 1950px
+  padding: 0 15px
+  margin: 0 auto
+  height: 100%
+  position: relative
+  &:after
+    content: ""
+    display: block
+    clear: both
+    width: 100px
+    height: 1px
+
+.container
+  max-width: 1445px
+  padding: 0 15px
+  margin: 0 auto
+  height: 100%
+  position: relative
+
+.header
+  padding-top: 26px
+  margin-bottom: 50px
+
+.logo
+  float: left
+  margin-left: 66px
+  margin-right: 70px
+
+.menu-wrap
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding-top: 32px
+
+.menu
+  list-style-type: none
+  li
+    display: inline-block
+    margin-right: 75px
+    &:last-of-type
+      margin-right: 0
+    a
+      color: #000
+      display: inline-block
+      text-decoration: none
+      font-size: 0.875em
+      font-style: normal
+      line-height: 1.14
+      letter-spacing: 0.23px
+      transition: all .5s
+      position: relative
+      &:before
+        display: block
+        content: attr(title)
+        font-weight: 900
+        height: 0
+        overflow: hidden
+        visibility: hidden
+        font-size: 16px
+      &:after
+        content: ""
+        display: inline-block
+        height: 1px
+        background-color: $gold
+        position: absolute
+        transition: all .5s
+        left: 0
+        bottom: -4px
+        width: 0
+      &:hover,
+      &.active
+        font-weight: 900
+        font-size: 16px
+        &:after
+          width: 19px
+
+.slider-home
+  padding-bottom: 55px
+
+.slider-home_item
+  background-repeat: no-repeat
+  background-position: right center
+  background-size: contain
+  height: 880px
+  .container
+    margin: 0
+    background: url(../images/dest/black-bg.png) 0 center no-repeat
+    display: flex
+    justify-content: center
+    flex-direction: column
+    padding-left: 160px
+
+.slider-text-wrap
+  max-width: 520px
+
+
+.slider-subtitle
+  font-size: 1.375em
+  font-weight: 500
+  line-height: 1.27
+  letter-spacing: normal
+  color: $gold
+  border-bottom: 1px solid rgba($gold, .5)
+  padding-bottom: 20px
+  margin-bottom: 35px
+
+.slider-title
+  font-size: 3.375em
+  font-weight: 900
+  font-stretch: normal
+  font-style: normal
+  line-height: 1.24
+  letter-spacing: normal
+  color: #ffffff
+  margin-bottom: 70px
+
+.slider-cta
+  font-size: 1em
+  font-weight: 900
+  font-stretch: normal
+  font-style: normal
+  text-decoration: none
+  display: inline-block
+  line-height: 1.5
+  letter-spacing: 0.8px
+  text-align: center
+  color: #ffffff
+  padding: 20px 50px
+  border: 1px solid #fff
+  transition: all .5s
+  text-transform: uppercase
+  &:hover
+    color: $gold
+    border-color: $gold
+
+
+
+.owl-dots
+  position: absolute
+  top: 180px
+  left: 160px
+  button
+    border: none
+    outline: none
+.owl-carousel button.owl-dot
+  margin-right: 12px
+  position: relative
+  span
+    width: 26px
+    height: 26px
+    background-color: rgba(#000, .25)
+    color: #fff
+    font-size: 12px
+    font-weight: 900
+    display: inline-block
+    font-stretch: normal
+    font-style: normal
+    border-radius: 50%
+    line-height: 26px
+    letter-spacing: 0.2px
+    text-align: center
+    transition: all .5s
+    &:before
+      counter-increment: num
+      content: counter(num)
+      opacity: .8
+    &:hover
+      background-color: $gold
+      color: #000
+  &.active
+    span
+      background-color: $gold
+      color: #000
+    &:after
+      content: ""
+      width: 36px
+      height: 36px
+      border: 1px solid transparent
+      border-top-color: rgba($gold, .8)
+      border-right-color: rgba($gold, .8)
+      border-bottom-color: rgba($gold, .8)
+      position: absolute
+      top: -5px
+      left: -5px
+      border-radius: 50%
+      animation: spin 1.5s linear infinite
+      display: inline-block
+
+.owl-carousel button.owl-dot.active:hover:after
+    animation-play-state: paused
+
+.owl-carousel
+  .owl-nav
+    display: inline-block
+    position: absolute
+    right: 14%
+    bottom: 0
+    button.owl-next
+      width: 26px
+      height: 20px
+      background: url(../images/dest/right.svg) 0 center no-repeat
+      background-size: contain
+      position: relative
+      top: 4px
+      opacity: .25
+      transition: opacity .25s
+      outline: none
+      display: inline-block
+      &:hover
+        opacity: 1
+    button.owl-prev
+      width: 26px
+      height: 20px
+      background: url(../images/dest/left.svg) 0 center no-repeat
+      background-size: contain
+      position: relative
+      top: -5px
+      margin-right: 95px
+      opacity: .25
+      transition: opacity .25s
+      outline: none
+      display: inline-block
+      &:hover
+        opacity: 1
+
+
+.language
+  display: inline-block
+  position: relative
+  top: -28px
+  z-index: 10
+  &-link
+    display: inline-block
+    font-size: 14px
+    font-weight: normal
+    font-stretch: normal
+    font-style: normal
+    line-height: 1.14
+    letter-spacing: 0.23px
+    text-align: center
+    color: #000000
+    text-decoration: none
+    text-transform: uppercase
+    margin-right: 10px
+    &:after
+      display: block
+      content: attr(title)
+      font-weight: 900
+      height: 0
+      overflow: hidden
+      visibility: hidden
+      font-family: Avenir-Heavy
+      font-size: 14px
+    &.active,
+    &:hover
+      font-family: Avenir-Heavy
+      font-weight: 900
+
+.section
+  padding: 80px 0
+  &-title
+    font-size: 2.25em
+    font-weight: 900
+    font-stretch: normal
+    font-style: normal
+    line-height: 1.17
+    margin-bottom: 45px
+    &_small
+      font-family: Avenir-Black
+      font-size: 1em
+      font-weight: 900
+      line-height: 1.44
+      letter-spacing: 0.72px
+      text-align: center
+      color: $gold
+      text-transform: uppercase
+      margin-bottom: 30px
+    &_white
+      color: #fff
+
+.slider-services
+  &_item
+    background-color: #eeeeee
+    width: 335px
+    height: 290px
+    padding: 38px 34px
+    transition: all .5s
+    position: relative
+    &:hover
+      transform: scale(1.08)
+      .slider-services_more
+        opacity: 1
+  &_img
+    display: block
+    width: 34px
+    height: auto
+    margin-bottom: 60px
+    img
+      width: 100%
+      height: auto
+  &_title
+    font-family: Avenir-Roman
+    font-size: 1.875em
+    line-height: 1.2
+    color: #000000
+  &_more
+    text-decoration: none
+    text-transform: uppercase
+    position: absolute
+    bottom: 38px
+    display: inline-block
+    left: 34px
+    font-family: Avenir-Heavy
+    color: #000
+    padding-left: 40px
+    opacity: 0
+    transition: all .5s
+    &:before
+      content: ""
+      width: 30px
+      position: absolute
+      left: 0
+      top: 10px
+      height: 2px
+      background-color: $gold
+      display: inline-block
+
+
+
+.section-our-services
+  .container
+    max-width: 1475px
+  .section-title
+    max-width: 1445px
+    padding-left: 15px
+  .owl-carousel .owl-stage-outer
+    padding: 15px
+
+.section-our-services
+  .owl-carousel .owl-nav
+    display: block
+    position: relative
+    top: 0
+    right: 0
+    padding: 0 15px
+    margin-top: 15px
+    .owl-next
+      position: absolute
+      right: 20px
+
+.section-about
+  &_wrap
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &_left
+    width: 49%
+    position: relative
+    &:before
+      content: ""
+      width: 330px
+      height: 352px
+      display: block
+      position: absolute
+      background-color: #000
+      opacity: 0.74
+      top: -83px
+      left: -90px
+    img
+      width: 100%
+  &_right
+    width: 47%
+  &_description
+    margin-bottom: 40px
+    font-size: 1em
+    font-weight: normal
+    line-height: 1.44
+    max-width: 585px
+
+.section-cta
+  display: inline-block
+  padding: 20px 40px
+  font-size: 1em
+  font-family: Avenir-Black
+  font-weight: 900
+  line-height: 1.5
+  color: $gold
+  text-transform: uppercase
+  text-decoration: none
+  border: 1px solid $gold
+  letter-spacing: 0.8px
+  transition: all .5s
+  &:hover
+    color: #000
+    border-color: #000
+
+.section-partners
+  margin-bottom: 100px
+  &_wrap
+    display: flex
+    justify-content: space-around
+    align-items: center
+
+
+.section-support
+  background-color: #000
+  padding: 0
+  &_wrap
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &_description
+    font-size: 1em
+    font-weight: normal
+    line-height: 1.44
+    color: #ffffff
+    margin-bottom: 40px
+  &_left
+    width: 585px
+  &_right
+    width: 662px
+    img
+      width: 100%
+      display: block
+      margin-top: -93px
+  .section-cta:hover
+    border-color: #fff
+    color: #fff
+
+
+.contacts_link
+  max-width: 278px
+  padding: 35px 25px 35px 35px
+  background-color: rgba(#ffffff, .75)
+  margin: -60px auto 0
+  position: relative
+  z-index: 10
+  a
+    display: block
+    text-decoration: none
+    color: #000
+    font-family: Avenir-Medium
+    font-size: 0.875em
+    font-weight: 500
+    line-height: 1.64
+    transition: all .25s
+    padding-left: 28px
+    &:hover
+      color: #fff
+  &-phone
+    margin-bottom: 6px
+    background: url(../images/dest/tele-icon.svg) 0 center no-repeat
+  &-email
+    background: url(../images/dest/mail-icon.svg) 0 center no-repeat
+
+
+.footer
+  background-color: #000
+  color: #fff
+  &_wrap
+    display: flex
+    align-items: center
+  &_logo
+    display: inline-block
+    max-width: 113px
+    margin-right: 80px
+    img
+      width: 100%
+  &_address
+    font-size: 0.875em
+    line-height: 2
+    margin-right: 155px
+    span
+      font-family: Avenir-Heavy
+  &_menu
+    display: flex
+    align-items: flex-end
+    &-link
+      display: block
+      text-decoration: none
+      color: #fff
+      font-size: .875em
+      line-height: 2
+      transition: all .5s
+      &:after
+        display: block
+        content: attr(title)
+        height: 0
+        overflow: hidden
+        visibility: hidden
+        font-family: Avenir-Heavy
+        font-size: 14px
+        font-weight: 900
+      &:hover,
+      &.action
+        font-family: Avenir-Heavy
+
+    &-left
+      margin-right: 90px
+
+
+
+
+
+
+
+
+
+
+//@import "aos"
+
+@import "animation"
+
+@import "media"
